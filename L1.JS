@@ -20,3 +20,6 @@ var studyRoom;
 studyRoom = "Abdo";
 console.log(studyRoom);
 
+var line = "FirstLine\n\t\SecondLine\nThirdLine";
+console.log(line);
+

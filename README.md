@@ -21,4 +21,21 @@
 
    2- myVar++;
 
-   ==22
+   =22
+## Decrementing Numbers
+ - Means to cut 1
+
+   var myVar = 22; /  2 ways to cut 1
+
+   1- myVar = myVar - 1;
+
+   =21
+
+   2- myVar--;
+
+   =21
+## Escape Sequences in Strings
+   ![alt text](images/image.png)
+
+## Concatenating Strings with Plus Operator
+   ![alt text](images/image1.png)
