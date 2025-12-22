@@ -1,49 +1,64 @@
-const item = document.getElementById("list");
-item.innerHTML = "";
+document.addEventListener('DOMContentLoaded', function () {
 
-for (let i = 1; i < 5; i++) {
-    item.innerHTML += "<li>Item " + i + "</li>";
-}
+    document.querySelectorAll(".btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            console.log("Clicked:", e.target.textContent);
+        });
+    });
 
-document.querySelectorAll(".ids").forEach(h => {
-    h.style.backgroundColor = "red";
-    h.style.color = "white";
-    h.style.borderRadius = "20px";
-});
-document.querySelectorAll(".msg").forEach(p => {
-    p.style.backgroundColor = "green";
-    p.style.color = "white";
-});
+    document.addEventListener("click", (e) => {
+        console.log("Clicked:", e.clientX, e.clientY);
+    })
 
-// console.log(changeStyleHeader);
+    const item = document.getElementById("list");
+    item.innerHTML = "";
 
-function $(selector) {
-    return document.querySelector(selector);
-}
-function $$(selector) {
-    return document.querySelectorAll(selector);
-}
+    for (let i = 0; i < 5; i++) {
+        item.innerHTML += "<li>Item " + i + "</li>";
+    }
 
-function getID(selector) {
-    return document.getElementById(selector);
-}
+    document.querySelectorAll(".ids").forEach(h => {
+        h.style.backgroundColor = "red";
+        h.style.color = "white";
+        h.style.borderRadius = "20px";
+    })
 
-function list(selector) {
-    return document.classList(selector);
-}
+    document.querySelectorAll(".msg").forEach(p => {
+        p.style.backgroundColor = "green";
+        p.style.color = "white";
+    });
+
+    // console.log(changeStyleHeader);
+
+    function $(selector) {
+        return document.querySelector(selector);
+    }
+    function $$(selector) {
+        return document.querySelectorAll(selector);
+    }
+
+    function getID(selector) {
+        return document.getElementById(selector);
+    }
+
+    // function list(selector) {
+    // return document.classList(selector);
+    // }
 
 
-let l = list("class-list");
-console.log(l);
+    // let l = list("class-list");
+    // console.log(l);
 
 
-let node = $("#msg");
-console.log(node);
+    let node = $("#msg");
+    console.log(node);
 
-let n = $$("#msg");
-console.log(n);
+    let n = $$("#msg");
+    console.log(n);
 
-let i = getID("id");
-console.log(i);
+    let i = getID("id");
+    console.log(i);
 
+
+})
 
