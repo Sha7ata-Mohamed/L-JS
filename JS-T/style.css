@@ -1,4 +1,108 @@
 /* Page layout and base typography */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 24px;
+}
+
+.cart {
+    width: 360px;
+    border: 4px solid #d79a00;
+    background: #fff;
+}
+
+.cart-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #d79a00;
+    padding: 10px 12px;
+}
+
+.cart-head h2 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.cart-toggle {
+    border: 0;
+    background: #d79a00;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+.cart-body {
+    padding: 10px;
+}
+
+.item {
+    position: relative;
+    border: 3px solid #d79a00;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.remove {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.thumb {
+    width: 90px;
+    height: 70px;
+    border: 2px solid #cfd8dc;
+    display: grid;
+    place-items: center;
+}
+
+.info h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 8px;
+}
+
+.qty button {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #d79a00;
+    background: #f6c34e;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.count {
+    min-width: 18px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.price {
+    color: #e53935;
+    font-weight: 700;
+}
+
 body {
     margin: 0;
     min-height: 100vh;

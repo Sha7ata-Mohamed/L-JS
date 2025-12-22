@@ -21,8 +21,75 @@
     <h1 class="ids">ex</h1>
     <h1 class="ids">eq</h1>
     <h1 class="ids">ew</h1>
-
+    <button onmousemove="displayDate()" id="demo">The time is?</button>
     <ul id="list"></ul>
+    <aside id="cart" class="cart">
+      <div class="cart-head">
+        <h2>CART</h2>
+        <button class="cart-toggle" id="cartToggle"
+          aria-label="Hide cart">▲</button>
+      </div>
+
+      <div class="cart-body" id="cartBody">
+        <!-- Item 1 -->
+        <div class="item" data-price="150">
+          <button class="remove" aria-label="Remove item">×</button>
+
+          <div class="thumb" aria-hidden="true">
+            <!-- simple shirt icon -->
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <path d="M22 10l10 6 10-6 10 8-6 10v26H18V28l-6-10 10-8z"
+                fill="#2f6f8a" />
+              <path d="M26 12c2 5 10 5 12 0" fill="none" stroke="#ffffff"
+                stroke-width="3" />
+            </svg>
+          </div>
+
+          <div class="info">
+            <h3>Product name</h3>
+
+            <div class="qty">
+              <button class="minus" aria-label="Decrease">-</button>
+              <span class="count">1</span>
+              <button class="plus" aria-label="Increase">+</button>
+            </div>
+
+            <div class="price">$ <span class="lineTotal">150</span></div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="item" data-price="150">
+          <button class="remove" aria-label="Remove item">×</button>
+
+          <div class="thumb" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <path d="M22 10l10 6 10-6 10 8-6 10v26H18V28l-6-10 10-8z"
+                fill="#2f6f8a" />
+              <path d="M26 12c2 5 10 5 12 0" fill="none" stroke="#ffffff"
+                stroke-width="3" />
+            </svg>
+          </div>
+
+          <div class="info">
+            <h3>Product name</h3>
+
+            <div class="qty">
+              <button class="minus" aria-label="Decrease">-</button>
+              <span class="count">1</span>
+              <button class="plus" aria-label="Increase">+</button>
+            </div>
+
+            <div class="price">$ <span class="lineTotal">150</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script>
+      function displayDate() {
+          document.getElementById("demo").innerHTML = Date();
+      }
+    </script>
     <script src="script.js" defer></script>
   </body>
 </html>
