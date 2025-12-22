@@ -1,0 +1,43 @@
+body {
+    background-color: whitesmoke;
+    font-size: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+
+
+body h1 {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: groove;
+    border-color: brown;
+    border-width: 5px;
+    animation: backwards;
+    animation-name: animation;
+    animation-duration: 4s;
+}
+
+h1:hover {
+    transition: width 2s, height 4s, background-color 3s;
+
+}
+
+@keyframes animation {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
