@@ -1,44 +1,58 @@
 # Learning-JS
+
 **This is the start for me to learn JS for my own skills**
+
 # General Note
- - After any code line in JS the end of the code must write this symbol inside the parentheses **( ; )**
+
+- After any code line in JS the end of the code must write this symbol inside the parentheses **( ; )**
+
 ## Variable
- - const
 
-    Used in only the scope that I declare in CAN NOT BE CHANGED
- -  var
+- const
 
-    Can be used in all the program
- - let
+  Used in only the scope that I declare in CAN NOT BE CHANGED
+
+- var
+
+  Can be used in all the program
+
+- let
+
 ## Incrementing Numbers
- - Means to add 1
 
-   var myVar = 21; / 2 ways to add 1
+- Means to add 1
 
-   1- myVar = myVar + 1;
+  var myVar = 21; / 2 ways to add 1
 
-   =22
+  1- myVar = myVar + 1;
 
-   2- myVar++;
+  =22
 
-   =22
+  2- myVar++;
+
+  =22
+
 ## Decrementing Numbers
- - Means to cut 1
 
-   var myVar = 22; /  2 ways to cut 1
+- Means to cut 1
 
-   1- myVar = myVar - 1;
+  var myVar = 22; / 2 ways to cut 1
 
-   =21
+  1- myVar = myVar - 1;
 
-   2- myVar--;
+  =21
 
-   =21
+  2- myVar--;
+
+  =21
+
 ## Escape Sequences in Strings
-   ![alt text](images/image.png)
+
+![alt text](images/image.png)
 
 ## Concatenating Strings with Plus Operator
-   ![alt text](images/image1.png)
+
+![alt text](images/image1.png)
 
 # JavaScript Learning Roadmap (12 Steps)
 
@@ -56,18 +70,23 @@ Follow each step in order and complete the **Try it** task before moving on.
    index.html
    script.js
    ```
+
 3. Sample `index.html`:
 
    ```html
-   <!doctype html>
+   <!DOCTYPE html>
    <html>
-     <head><meta charset="utf-8"><title>JS Playground</title></head>
+     <head>
+       <meta charset="utf-8" />
+       <title>JS Playground</title>
+     </head>
      <body>
        <h1>Hello JS</h1>
        <script src="script.js" defer></script>
      </body>
    </html>
    ```
+
 4. Open in your browser or use Live Server.
 5. Run in terminal:
 
@@ -81,8 +100,8 @@ Follow each step in order and complete the **Try it** task before moving on.
 
 ## Step 1 — Values, Types, Variables
 
-* Use `let` (reassignable) and `const` (non-reassignable).
-* Template literals: `` `${varName}` ``
+- Use `let` (reassignable) and `const` (non-reassignable).
+- Template literals: `` `${varName}` ``
 
 Example:
 
@@ -100,14 +119,18 @@ console.log(`${name}'s score is ${score}`);
 
 ```js
 const x = 7;
-if (x % 2 === 0) console.log("even"); else console.log("odd");
+if (x % 2 === 0) console.log("even");
+else console.log("odd");
 
 for (let i = 0; i < 3; i++) console.log(i);
 
 const day = "Mon";
 switch (day) {
-  case "Mon": console.log("Start"); break;
-  default: console.log("Other");
+  case "Mon":
+    console.log("Start");
+    break;
+  default:
+    console.log("Other");
 }
 ```
 
@@ -118,11 +141,13 @@ switch (day) {
 ## Step 3 — Functions & Scope
 
 ```js
-function add(a, b = 0) { return a + b; }
+function add(a, b = 0) {
+  return a + b;
+}
 const mul = (a, b) => a * b;
 
 function makeCounter() {
-  let c = 0; 
+  let c = 0;
   return () => ++c; // closure
 }
 ```
@@ -135,8 +160,8 @@ function makeCounter() {
 
 ```js
 const nums = [2, 5, 8];
-const doubled = nums.map(n => n * 2);
-const evens = nums.filter(n => n % 2 === 0);
+const doubled = nums.map((n) => n * 2);
+const evens = nums.filter((n) => n % 2 === 0);
 const sum = nums.reduce((a, n) => a + n, 0);
 
 const user = { id: 1, name: "Abdo", role: "dev" };
@@ -176,7 +201,7 @@ btn.addEventListener("click", () => {
 HTML:
 
 ```html
-<input id="age" placeholder="Age">
+<input id="age" placeholder="Age" />
 <button id="check">Can enter?</button>
 <p id="msg"></p>
 ```
@@ -186,7 +211,8 @@ JS:
 ```js
 document.querySelector("#check").addEventListener("click", () => {
   const age = Number(document.querySelector("#age").value);
-  document.querySelector("#msg").textContent = age >= 18 ? "Welcome" : "Too young";
+  document.querySelector("#msg").textContent =
+    age >= 18 ? "Welcome" : "Too young";
 });
 ```
 
@@ -227,7 +253,7 @@ In HTML:
 ```html
 <script type="module">
   import { add } from "./math.js";
-  console.log(add(2,3));
+  console.log(add(2, 3));
 </script>
 ```
 
@@ -253,11 +279,16 @@ console.log(s.theme);
 ```js
 class Counter {
   #value = 0; // private
-  inc() { this.#value++; }
-  get value() { return this.#value; }
+  inc() {
+    this.#value++;
+  }
+  get value() {
+    return this.#value;
+  }
 }
 const c = new Counter();
-c.inc(); console.log(c.value);
+c.inc();
+console.log(c.value);
 ```
 
 **Try it:** Create `Timer` class with `start()`/`stop()` logging seconds.
@@ -272,7 +303,7 @@ npm i -D eslint prettier
 npx eslint --init
 ```
 
-* Use VS Code breakpoints & Chrome DevTools.
+- Use VS Code breakpoints & Chrome DevTools.
 
 **Try it:** Add `"dev": "node script.js"` to `package.json` scripts and run `npm run dev`.
 
@@ -287,14 +318,16 @@ npm i -D jest
 `sum.js`:
 
 ```js
-export const sum = (a,b)=>a+b;
+export const sum = (a, b) => a + b;
 ```
 
 `sum.test.js`:
 
 ```js
 import { sum } from "./sum.js";
-test("adds numbers", ()=>{ expect(sum(2,3)).toBe(5); });
+test("adds numbers", () => {
+  expect(sum(2, 3)).toBe(5);
+});
 ```
 
 Run:
