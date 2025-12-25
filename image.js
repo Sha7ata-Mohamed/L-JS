@@ -1,17 +1,11 @@
-function setBackground(e) {
-    if (e.type == "focus") {
-        e.target.style.backgroundColor = "#FFE393";
-    }
-    else if (e.type == "blur") {
-        e.target.style.backgroundColor = "white";
-    }
-}
-// set up the event listeners only after the DOM is loaded
-window.addEventListener("load", function () {
-    const cssSelector = "input[type=text],input[type=password]";
-    const fields = document.querySelectorAll(cssSelector);
-    for (let f of fields) {
-        f.addEventListener("focus", setBackground);
-        f.addEventListener("blur", setBackground);
-    }
-});
+const paintings = [
+    { title: "Girl with a Pearl Earring", artist: "Vermeer", year: 1665 },
+    { title: "Artist Holding a Thistle", artist: "Durer", year: 1493 },
+    { title: "Wheatfield with Crows", artist: "Van Gogh", year: 1890 },
+    { title: "Burial at Ornans", artist: "Courbet", year: 1849 },
+    { title: "Sunflowers", artist: "Van Gogh", year: 1889 }
+];
+
+paintings.forEach((p) => {
+    console.log(p.title + ' ' + 'by' + ' ' + p.artist + ' ' + p.year);
+})
