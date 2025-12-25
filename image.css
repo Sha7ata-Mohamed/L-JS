@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #3f3f3f;
+    font-family: Arial, sans-serif;
+    padding: 24px;
+}
+
+/* Card */
+#loginForm {
+    width: 440px;
+    max-width: calc(100vw - 40px);
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .35);
+    padding: 22px 22px 24px;
+
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    row-gap: 14px;
+}
+
+/* Title */
+#loginForm::before {
+    content: "Registration";
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #555;
+    padding: 6px 0 10px;
+}
+
+/* Left orange icon blocks */
+#loginForm label.icon {
+    grid-column: 1;
+    width: 56px;
+    height: 46px;
+    background: #f36c21;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 0 0 4px;
+}
+
+/* Inputs + select */
+#loginForm input[type="text"],
+#loginForm input[type="password"],
+#loginForm select {
+    grid-column: 2;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+    padding: 0 14px;
+    font-size: 15px;
+    outline: none;
+}
+
+#loginForm input:focus,
+#loginForm select:focus {
+    border-color: #f36c21;
+}
+
+/* Remove the <br> spacing effect */
+#loginForm br {
+    display: none;
+}
+
+/* ------- FIX RADIO LAYOUT (your HTML has no wrapper) ------- */
+/* Make radios normal size and keep them left */
+#loginForm input.bigRadio {
+    grid-column: 2;
+    justify-self: start;
+    margin: 6px 0 0 6px;
+    transform: none;
+    /* stop the giant radio */
+}
+
+/* Pull the span up to the same row as the radio and place it to the right */
+#loginForm input.bigRadio+span {
+    grid-column: 2;
+    margin-top: -38px;
+    /* moves text up to the radio row */
+    margin-left: 42px;
+    /* moves text right of the radio */
+    color: #666;
+    font-size: 15px;
+}
+
+/* ------- FIX "REMEMBER ME" BAR ------- */
+/* #long ALSO has class="icon", so force it to be full width bar */
+#loginForm #long {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 46px;
+
+    background: #f36c21;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    /* override icon-square rules */
+    border-radius: 4px;
+}
+
+/* Put checkbox on the right inside the bar (hacky but works with your HTML) */
+#loginForm #save {
+    grid-column: 2;
+    justify-self: end;
+    width: 18px;
+    height: 18px;
+    margin-top: -40px;
+    /* lines it up with the orange bar */
+    margin-right: 14px;
+}
+
+/* Register button full width */
+#loginForm button[type="submit"] {
+    grid-column: 1 / -1;
+    height: 52px;
+    border: 0;
+    border-radius: 4px;
+    background: #2e80c7;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#loginForm button[type="submit"]:hover {
+    filter: brightness(.95);
+}
+
+/* Errors box */
+#errors {
+    width: 440px;
+    max-width: calc(100vw - 40px);
+    margin-top: 14px;
+    background: #fff;
+    border-left: 4px solid #dc2626;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #dc2626;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .25);
+}
+
+.hidden {
+    display: none;
+}

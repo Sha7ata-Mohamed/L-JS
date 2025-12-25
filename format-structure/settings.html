@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Settings</title>
+        <link rel="stylesheet" href="settings.css">
+    </head>
+
+    <body>
+        <div class="wrap">
+            <nav class="nav">
+                <a class="navbtn" href="index.html">
+                    <span class="ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path
+                                d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7z" /></svg>
+                    </span>
+                    <span>Go to Home</span>
+                </a>
+
+                <a class="navbtn" href="complete-profile.html">
+                    <span class="ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path
+                                d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2-8 4.5V21h16v-2.5C20 16 16.42 14 12 14Z" /></svg>
+                    </span>
+                    <span>Complete Profile</span>
+                </a>
+
+                <a class="navbtn active" href="settings.html"
+                    aria-current="page">
+                    <span class="ico" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path
+                                d="M19.14 12.94a7.7 7.7 0 0 0 .05-.94 7.7 7.7 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94l-.36-2.54A.5.5 0 0 0 13.9 1h-3.8a.5.5 0 0 0-.49.42l-.36 2.54c-.58.23-1.12.54-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 7.88a.5.5 0 0 0 .12.64l2.03 1.58c-.03.31-.05.62-.05.94s.02.63.05.94L2.83 14.52a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96c.5.4 1.05.71 1.63.94l.36 2.54a.5.5 0 0 0 .49.42h3.8a.5.5 0 0 0 .49-.42l.36-2.54c.58-.23 1.12-.54 1.63-.94l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64ZM12 15.5A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5Z" /></svg>
+                    </span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <section class="card">
+                <h1>Settings</h1>
+                <p class="sub">Everything here is saved in
+                    <b>localStorage</b>.</p>
+
+                <div class="settings">
+                    <div class="item">
+                        <div class="itemTop">
+                            <div>
+                                <div class="title">Light mode</div>
+                                <div class="desc">Switch between dark and light
+                                    UI.</div>
+                            </div>
+                            <button class="toggle" id="themeToggle"
+                                type="button" aria-label="Toggle theme">
+                                <span class="knob"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="itemTop">
+                            <div>
+                                <div class="title">Notifications</div>
+                                <div class="desc">Enable basic alerts for demo
+                                    purposes.</div>
+                            </div>
+                            <button class="toggle" id="notifToggle"
+                                type="button" aria-label="Toggle notifications">
+                                <span class="knob"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="title">Language</div>
+                        <div class="desc">Just a UI setting (demo).</div>
+                        <select id="langSelect">
+                            <option value="en">English</option>
+                            <option value="ar">Arabic</option>
+                        </select>
+                    </div>
+
+                    <div class="item">
+                        <div class="title">Accent color</div>
+                        <div class="desc">Pick a vibe.</div>
+                        <select id="accentSelect">
+                            <option value="blue-purple">Blue → Purple</option>
+                            <option value="green-blue">Green → Blue</option>
+                            <option value="orange-pink">Orange → Pink</option>
+                        </select>
+                    </div>
+
+                    <div class="item" style="grid-column: 1 / -1;">
+                        <div class="title">Account</div>
+                        <div class="desc">These buttons don’t connect to a
+                            backend. Good for a project demo UI.</div>
+                        <div class="btnRow">
+                            <button class="btn" type="button" id="saveBtn">Save
+                                settings</button>
+                            <button class="btn secondary" type="button"
+                                id="resetBtn">Reset</button>
+                        </div>
+                        <div class="toast" id="toast">Saved.</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="settings.js"></script>
+    </body>
+</html>
