@@ -1,0 +1,134 @@
+/* Modern, clean login form UI */
+
+:root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --primary: #0d4988;
+    --primary-hover: #0b3d73;
+    --danger: #dc2626;
+    --success: #16a34a;
+    --shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 40rem;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% 10%, rgba(13, 73, 136, .12), transparent 60%),
+        radial-gradient(900px 500px at 80% 30%, rgba(99, 102, 241, .10), transparent 55%),
+        var(--bg);
+    color: var(--text);
+}
+
+h1 {
+    font-size: 28px;
+    letter-spacing: .2px;
+    text-align: center;
+}
+
+#loginForm {
+    width: min(420px, 100%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 22px 18px;
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 12px 0 8px;
+    color: var(--text);
+}
+
+input {
+    width: 100%;
+    height: 44px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease, transform .08s ease;
+    background: #fff;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+input:focus {
+    border-color: rgba(13, 73, 136, .65);
+    box-shadow: 0 0 0 4px rgba(13, 73, 136, .14);
+}
+
+/* remove the <br><br> spacing look */
+#loginForm br {
+    display: none;
+}
+
+/* error/success messages */
+#pwError,
+#eError,
+#pwCorrect,
+#eCorrect {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+#pwError,
+#eError {
+    color: var(--danger);
+}
+
+#pwCorrect,
+#eCorrect {
+    color: var(--success);
+}
+
+/* button */
+button[type="submit"] {
+    width: 100%;
+    height: 46px;
+    margin-top: 16px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform .08s ease, filter .15s ease, background .15s ease;
+}
+
+button[type="submit"]:hover {
+    background: var(--primary-hover);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Optional helper classes if you want to toggle input styles in JS */
+.input-error {
+    border-color: rgba(220, 38, 38, .7) !important;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, .12) !important;
+}
+
+.input-success {
+    border-color: rgba(22, 163, 74, .7) !important;
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, .12) !important;
+}
