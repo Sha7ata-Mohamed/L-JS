@@ -2,8 +2,24 @@
 <html>
     <body>
         <h2>Load JSON from another file</h2>
-        <p id="demo"></p>
+        <form action="/search" method="get">
+            <label for="major">Choose a major:</label>
 
-        <script src="./test.js"></script>
+            <select id="major" name="major">
+                <optgroup label="Business">
+                    <option value="mis" selected>MIS</option>
+                    <option value="acct">Accounting</option>
+                    <option value="mkt">Marketing</option>
+                </optgroup>
+
+                <optgroup label="Engineering">
+                    <option value="cs">Computer Science</option>
+                    <option value="ce">Computer Engineering</option>
+                </optgroup>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+
     </body>
 </html>
